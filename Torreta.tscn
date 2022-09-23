@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/towerDefense_tilesheet.png" type="Texture" id=1]
+[ext_resource path="res://Torreta.gd" type="Script" id=2]
+[ext_resource path="res://gun.gd" type="Script" id=3]
+[ext_resource path="res://gunout.gd" type="Script" id=4]
+
+[node name="Torreta" type="Node2D"]
+position = Vector2( 100, 150 )
+script = ExtResource( 2 )
+
+[node name="superficie" type="Sprite" parent="."]
+position = Vector2( 100, 150 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 837.223, 194.25, 118.381, 315.683 )
+
+[node name="base" type="Sprite" parent="."]
+position = Vector2( 99, 245 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1220, 453, 53, 53 )
+
+[node name="gun" type="Sprite" parent="."]
+position = Vector2( 100, 245 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1290, 515, 44, 58 )
+script = ExtResource( 3 )
+
+[node name="gunout" type="Sprite" parent="."]
+position = Vector2( 100, 245 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1290, 578, 44, 58 )
+script = ExtResource( 4 )
+
+[node name="fuego" type="Sprite" parent="gunout"]
+visible = false
+position = Vector2( -8.42105, -32.6316 )
+rotation = -3.14159
+scale = Vector2( 1.1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1368.67, 781.739, 15.6752, 37.8049 )
+
+[node name="fuego2" type="Sprite" parent="gunout"]
+visible = false
+position = Vector2( 7.36841, -32.6316 )
+rotation = -3.14159
+scale = Vector2( 1.1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1368.67, 781.739, 15.6752, 37.8049 )
+
+[node name="misil" type="Sprite" parent="."]
+visible = false
+position = Vector2( 89, 85 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1367.88, 652.864, 17.0621, 40.8973 )
+
+[node name="misil2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 105, 85 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1367.88, 652.864, 17.0621, 40.8973 )
+
+[node name="enemigo" type="Sprite" parent="."]
+position = Vector2( 98, 50 )
+rotation = 1.54462
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1037.29, 650.151, 40.243, 44.7146 )
+
+[node name="explosion" type="Sprite" parent="."]
+visible = false
+position = Vector2( 96, 46 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1424.24, 779.503, 30.0396, 46.2148 )
