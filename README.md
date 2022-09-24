@@ -5,7 +5,7 @@ Este proyecto fue desarrollado para la evaluación de conocimientos del primer p
 =======
 ![imagen](https://user-images.githubusercontent.com/45503812/192073700-38e12972-95a7-436d-82da-5a18b2497fa0.jpg)
 
-Y el resultado del disparo:
+Y el resultado del disparo, con sonido de explosión (ver en la ejecución del proyecto):
 
 ![2](https://user-images.githubusercontent.com/45503812/192073779-66bb4d61-5244-4010-9618-12478fb2ccf7.jpg)
 >>>>>>> a964affff83a2d6a395f6744cc2f8d3e207a9ac9
