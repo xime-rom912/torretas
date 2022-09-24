@@ -15,6 +15,7 @@ onready var misil = $misil
 onready var misil2 = $misil2
 onready var enemigo = $enemigo
 onready var explosion = $explosion
+onready var pum = $gunout/pum
 
 
 
@@ -34,8 +35,9 @@ func _process(_delta):
 		enemigo.hide()
 		explosion.show()
 		torreta.hide()
+		pum.playing = true
 		#Esto ayuda a que dispare varias veces la torreta y que mate al enemigo, , como son misiles localizador se va directamente con el enemigo, no importa a donde a punto
-		yield(get_tree().create_timer(0.09), "timeout")	
+		yield(get_tree().create_timer(1), "timeout")	
 		#En estas lineas se cubre lo que se requiere para que la torreta cargue de nuevo
 		fuego.hide()
 		fuego2.hide()
@@ -45,3 +47,4 @@ func _process(_delta):
 		enemigo.show()
 		explosion.hide()
 		torreta.show()
+		pum.playing = false

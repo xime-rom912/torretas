@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/towerDefense_tilesheet.png" type="Texture" id=1]
 [ext_resource path="res://Torreta.gd" type="Script" id=2]
 [ext_resource path="res://gun.gd" type="Script" id=3]
 [ext_resource path="res://gunout.gd" type="Script" id=4]
+[ext_resource path="res://assets/pum.mp3" type="AudioStream" id=5]
 
 [node name="Torreta" type="Node2D"]
 position = Vector2( 100, 150 )
@@ -55,6 +56,9 @@ z_index = 1
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1368.67, 781.739, 15.6752, 37.8049 )
+
+[node name="pum" type="AudioStreamPlayer" parent="gunout"]
+stream = ExtResource( 5 )
 
 [node name="misil" type="Sprite" parent="."]
 visible = false
